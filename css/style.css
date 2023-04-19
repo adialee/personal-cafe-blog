@@ -125,7 +125,7 @@ figure img{
     align-items: center;
     justify-items: center;
 }
-.recommendations h1, .recommendations h2{
+.recommendations h1, .recommendations h2, .recommendations p{
     grid-column: 1 / -1;
     text-align: center;
 }
