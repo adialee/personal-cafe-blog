@@ -1,0 +1,235 @@
+.jump-link{
+    position: absolute;
+    display: block;
+    color: #000000;
+    border: solid 2px #000000;  
+    text-decoration: underline;
+    top: -40px;
+}
+.jump-link:focus{
+    position: static;
+    text-align: center;
+    top: 20px;
+}
+.menu{
+    display: none;
+}
+header{
+    border-bottom: solid 3px #000000;
+}
+.opening h1{
+    display: block;
+    text-align: center;
+    padding: 10% 0;
+}
+footer{
+    text-align: center;
+}
+body{
+    font-family: "Zilla Slab";
+}
+.home{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.opening{
+    width: 100%;
+    height: 50vw;
+    background-image: url('../images/home-bar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.intro, .note{
+    margin-left: 10px;
+}
+.home p{
+    font-size: 110%;
+}
+/* Coffee Guide Page */
+.guide h1{
+    font-size: 170%;
+    font-weight: bold;
+    text-align: center;
+
+}
+.guide h2, .guide figcaption{
+    text-align: center;
+    font-size: 110%;
+}
+.guide h3{
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+}
+.card-wrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    padding: 0 50px;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+}
+figure img{
+    width: 100%;
+}
+.back ul{
+    margin-left: 20px;
+    list-style: disc;
+}
+.inner{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%; /*Takes full grid cell height*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.inner{
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+/* Card contents flip horizontally when clicked */
+.inner.flip{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.front, .back{
+    display: flex;
+    backface-visibility: hidden;
+    /* For chrome and safari */
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+}
+.front{
+    width: 100%;
+    height: 100%;
+}
+.back{
+    position: absolute;
+    overflow: auto;
+    height: 0;
+    min-height: 100%;
+    line-height: 2;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+/* Recommendations */
+.recommendations{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    margin: 0 10px;
+    align-items: center;
+    justify-items: center;
+}
+.recommendations h1, .recommendations h2{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.bean img, .machine img, .flavoring img, .froth img{
+    width: 300px;
+    height: 300px;
+}
+.brewing, .milk, .grinding{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    gap: 10px;
+    margin: 5px;
+}
+.brewing img, .milk img, .grinding img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.methods p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+.methods h1 {
+    text-align: center;
+}
+@media screen and (prefers-reduced-motion: reduce){
+    .flip-card{
+        transition: none;
+    }
+    .navbar{
+        transition: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .nav-items{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin: 10px 0;
+        font-size: 110%;
+    }
+    .nav-link a{
+        color: black;
+        text-decoration: none;
+    }
+    .current a, .nav-link:hover{
+        text-decoration: underline;
+    }
+    .opening{
+        height: 40vw;
+    }
+    .card-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    figure{
+        height: 90%;
+    }
+    figure img{
+        width: 100%;
+        min-height: 100%;
+    }
+    .nav-link a{
+        color: black;
+        text-decoration: none;
+    }
+    .current a, .nav-link:hover{
+        text-decoration: underline;
+    }
+    .recommendations{
+        grid-template-columns: 1fr 1fr;
+    }
+    .bean, .machine, .flavoring, .froth{
+        grid-column: 1;
+    }
+    .bean-text, .machine-text, .flavoring-text, .froth-text{
+        grid-column: 2;
+    }
+}
+@media screen and (min-width: 1200px){
+    .nav-items{
+        justify-content: flex-end;
+    }
+    .card-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .recommendations{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 30px;
+    }
+    .bean-text, .machine-text, .flavoring-text, .froth-text{
+        grid-column: 2 / 4;
+    }
+}
+
