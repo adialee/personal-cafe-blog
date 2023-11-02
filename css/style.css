@@ -129,11 +129,77 @@ figure img{
     grid-column: 1 / -1;
     text-align: center;
 }
-.bean img, .machine img, .flavoring img, .froth img{
+/* Methods */
+/* .slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card{
+    border-radius: 25px;
+    background-color: #FFF;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+}
+.swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+    color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 35px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #4070F4;
+} */
+/* .bean img, .machine img, .flavoring img, .froth img{
     width: 300px;
     height: 300px;
 }
-.brewing, .milk, .grinding{
+.brewing, .milk, .grinders{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -143,7 +209,7 @@ figure img{
     gap: 10px;
     margin: 5px;
 }
-.brewing img, .milk img, .grinding img {
+.brewing img, .milk img, .grinders img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -157,7 +223,7 @@ figure img{
 }
 .methods h1 {
     text-align: center;
-}
+} */
 @media screen and (prefers-reduced-motion: reduce){
     .flip-card{
         transition: none;
@@ -233,3 +299,4 @@ figure img{
     }
 }
 
+/* DEVELOPED STUFF: updated recipe.html and style-css */
